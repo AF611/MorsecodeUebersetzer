@@ -32,10 +32,12 @@ public class MorsecodeUI {
                 "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"};
 
         //Eingabetext soll analysiert werden
-        String str = textFieldEingabe.getText();
-        for (int i = 0; i < str.length() - 1; i++) {
+        String eingabe = textFieldEingabe.getText();
+        for(int i = 0; i < eingabe.length() - 1; i++){
+                char c = eingabe.charAt(i);
+                System.out.println(c);
+            }
 
-        }
 
         //Zuweisung Buchstabe --> Morsecode
         for(int i = 0; i < morsezeichen.length - 1; i++) {
@@ -55,5 +57,6 @@ public class MorsecodeUI {
         frame.pack();
         frame.setVisible(true);
         frame.setLocationRelativeTo(null);
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     }
 }
