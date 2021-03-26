@@ -24,21 +24,27 @@ public class MorsecodeUI {
         });
     }
 
-    public void morseZeichenZuweisen(){
+    public void morseZeichenZuweisen() {
         String[] morsezeichen = {".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-",
                 ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.", "--.."};
 
         String[] alphabet = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p",
                 "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"};
 
+        //Eingabetext soll analysiert werden
         String str = textFieldEingabe.getText();
-
-        for(int i = 0; i < str.length(); i++){
+        for (int i = 0; i < str.length() - 1; i++) {
 
         }
-        morsezeichen [1] = alphabet[1];
-        textFieldAusgabe.setText("Hallo");
+
+        //Zuweisung Buchstabe --> Morsecode
+        for(int i = 0; i < morsezeichen.length - 1; i++) {
+            for(int j = 0; j < alphabet.length - 1; j++) {
+
+            }
+        }
     }
+
 
 
     public static void main (String[] args){
