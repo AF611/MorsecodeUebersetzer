@@ -12,36 +12,36 @@ public class MorsecodeUI {
     private JLabel jLabelAusgabe;
     private JTextField textFieldEingabe;
 
+    String[] morsezeichen = {".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-",
+            ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.", "--.." };
+
+    char[] alphabet = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
+
     public MorsecodeUI(){
-
-
         übersetzenButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
                 morseZeichenZuweisen();
+
             }
         });
     }
 
     public void morseZeichenZuweisen() {
-        String[] morsezeichen = {".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-",
-                ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.", "--.."};
-
-        String[] alphabet = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p",
-                "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"};
-
         //Eingabetext soll analysiert werden
         String eingabe = textFieldEingabe.getText();
-        for(int i = 0; i < eingabe.length() - 1; i++){
+        for(int i = 0; i < eingabe.length(); i++){
                 char c = eingabe.charAt(i);
-                System.out.println(c);
-            }
+                String s = String.valueOf(c);
+                textFieldAusgabe.setText(s);
 
+            }
+    }
 
         //Zuweisung Buchstabe --> Morsecode
-        for(int i = 0; i < morsezeichen.length - 1; i++) {
-            for(int j = 0; j < alphabet.length - 1; j++) {
+    public void buchstabenZuweisen(char c){
+        for(int i = 0; i < alphabet.length - 1; i++) {
+            if(c == alphabet[i]){
 
             }
         }
