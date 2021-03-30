@@ -30,10 +30,14 @@ public class MorsecodeUI {
     public char morseZeichenZuweisen() {
         //Eingabetext soll analysiert werden
         String eingabe = textFieldEingabe.getText();
-        for(int i = 0; i < eingabe.length(); i++){
+        for(int i = 0; i < eingabe.length(); i++) {
+            for (int j = 0; j < alphabet.length - 1; j++) {
                 char c = eingabe.charAt(i);
-
+                if (c == alphabet[j]) {
+                    textFieldAusgabe.setText(morsezeichen[j]);
+                }
             }
+        }
         return 0;
     }
 
