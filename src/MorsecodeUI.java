@@ -11,6 +11,7 @@ public class MorsecodeUI {
     private JLabel jLabelText;
     private JLabel jLabelAusgabe;
     private JTextField textFieldEingabe;
+    private char a;
 
     String[] morsezeichen = {".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-",
             ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.", "--.." };
@@ -22,27 +23,25 @@ public class MorsecodeUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 morseZeichenZuweisen();
-
             }
         });
     }
 
-    public void morseZeichenZuweisen() {
+    public char morseZeichenZuweisen() {
         //Eingabetext soll analysiert werden
         String eingabe = textFieldEingabe.getText();
         for(int i = 0; i < eingabe.length(); i++){
                 char c = eingabe.charAt(i);
-                String s = String.valueOf(c);
-                textFieldAusgabe.setText(s);
 
             }
+        return 0;
     }
 
         //Zuweisung Buchstabe --> Morsecode
     public void buchstabenZuweisen(char c){
         for(int i = 0; i < alphabet.length - 1; i++) {
             if(c == alphabet[i]){
-
+                System.out.println(morsezeichen[i]);
             }
         }
     }
