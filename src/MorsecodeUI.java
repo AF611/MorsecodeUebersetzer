@@ -29,11 +29,12 @@ public class MorsecodeUI {
     public void morseZeichenZuweisen() {
         //Eingabetext soll analysiert werden
         String eingabe = textFieldEingabe.getText();
-        for(int i = 0; i < eingabe.length(); i++) {
-            char c = eingabe.charAt(i);
+        for(int i = 0; i < eingabe.length() ; i++) {
             for (int j = 0; j < alphabet.length - 1; j++) {
+                char c = eingabe.charAt(i);
                 if (c == alphabet[j]) {
                     textFieldAusgabe.setText(morsezeichen[j]);
+
                 }
                 else{
 
